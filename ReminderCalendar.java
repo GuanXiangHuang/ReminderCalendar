@@ -121,7 +121,10 @@ public class ReminderCalendar extends Application{
     //Method to get all the messages that have been added as a String
     public String getMessages(){
         String body ="";
-
+        
+        if(messages.size() == 0){
+          return "No Messages.";
+        }
         for(String s :messages){
             body += s + "\n";
         }
